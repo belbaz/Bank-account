@@ -1,0 +1,172 @@
+:root {
+    --gris: rgba(255, 255, 255, .3);
+    --gris-clair: rgba(255, 255, 255, .5);
+    --input: #e0d8f0;
+    --shadow: rgba(0, 0, 0, .2);
+    --bleu-table: #6495ed;
+    --deg1: #da2093;
+    --deg2: #092eef;
+    --error: #be0000;
+    --success: limegreen;
+}
+
+body {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: repeating-linear-gradient(85deg, #b75190, var(--deg2)) fixed;
+    font-family: arial, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: xxx-large;
+    padding-top: 5rem;
+}
+
+.box {
+    width: 25rem;
+    font-size: 1.3rem;
+    background: var(--gris);
+    box-shadow: 50px 50px 40px -6px var(--shadow);
+    padding: 3rem;
+    border: 6px solid var(--gris);
+    border-radius: 40px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 1rem 1rem 0;
+    text-align: left;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+/* a l'intérieur du rectangle du formulaire */
+input {
+    height: 1.3rem;
+    width: 11rem;
+    font-size: 1.2rem;
+    background: var(--input);
+    border: 2px solid var(--gris-clair);
+    padding: 1.2rem;
+    outline: none;
+    border-radius: 50px;
+}
+
+input:hover, input:focus {
+    background: rgb(213 157 217 / 50%);
+    transition: all .3s;
+}
+
+/* Cacher les flèches de l'input number*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Cacher les flèches de l'input number*/
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+button, select, .button {
+    background: var(--input);
+    border: 2px solid var(--gris-clair);
+    padding: 1rem;
+    border-radius: 50px;
+    width: 150px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all .3s;
+}
+
+button:hover:enabled, select:hover, .button:hover {
+    background: rgba(205, 220, 55, 0.7);
+    transition: all .3s;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+option {
+    background: white;
+}
+
+.popButton {
+    text-decoration: none;
+    padding: 8px;
+    background-color: rgb(56 182 255 / 90%);
+    border-radius: 20px;
+    color: white;
+    border: 2px solid var(--gris-clair);
+    cursor: pointer;
+}
+
+.popButton:hover {
+    background: rgb(214 226 44 / 83%) !important;
+    transition: all .3s;
+}
+
+.info {
+    font-weight: 500;
+    opacity: .7;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px var(--shadow);
+}
+
+.success {
+    color: var(--success);
+}
+
+.error {
+    color: var(--error);
+}
+
+.result {
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-shadow: 3px 3px 4px var(--shadow);
+}
+
+table {
+    margin: auto;
+    border: 2px solid var(--bleu-table);
+    color: white;
+    border-radius: 5px;
+    width: 90%;
+    text-align: center;
+    border-spacing: 0;
+}
+
+thead {
+    font-size: 1.5rem;
+}
+
+td, th {
+    border: 2px solid var(--bleu-table);
+    padding: 8px;
+}

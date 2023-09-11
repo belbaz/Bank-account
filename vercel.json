@@ -1,0 +1,10 @@
+{
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*\\.php", "dest": "/index.php" },
+    { "src": "/.*", "dest": "/404.html" }
+  ],
+  "build": {
+    "command": "php index.php"
+  }
+}

@@ -1,0 +1,36 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Accueil</title>
+    <link href="icones/accueil.png" rel="icon" type="image/png"/>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styleAccueil.css" rel="stylesheet">
+
+    <script src="snow.js"></script>
+
+    <script>
+        /*couleur qui change*/
+        setInterval(function () {
+            document.getElementById('colorChange').style.color = '#' + Math.random().toString(16).substr(-6);
+        }, 750);
+    </script>
+</head>
+
+<body style="display: block">
+<h1 id="colorChange" style="transition: color 1s">Bienvenue sur le projet PHP</h1>
+
+<div style="justify-content: center; display: flex">
+    <form class="box" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-reset="false">
+        <button onclick="location.href ='admin/adminlogin.php'" type="button">Connexion</button>
+        <button onclick="location.href ='simulation/index.php'" type="button">Simulation</button>
+        <button onclick="location.href ='readme'" type="button">Readme</button>
+        <button onclick="window.open('https://github.com/belbaz/Bank-account', '_blank')" type="button">Github</button>
+        <button class="btn" onclick="location.href ='savoirplus/'" type="button">
+            En savoir plus
+        </button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+</body>
+</html>
